@@ -1,0 +1,278 @@
+/*------Global styles------*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+}
+
+/*------Body Styling------*/
+
+.menu_image {
+    width: 140px;
+}
+
+
+body {
+    background: radial-gradient(134.34% 134.34% at 50% 0%,
+            #90ADC6 0%,
+            #1f3757 100%);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+
+/*----Header---*/
+.menu_header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+}
+
+.menu_title {
+    font-size: 5vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu_message {
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 4vh;
+}
+
+/*---Menu Main---*/
+.menu_main {
+    grid-column: 1/4;
+    grid-row: 2/4;
+    justify-self: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 90px;
+}
+
+.menu_image {
+    width: 140px;
+    display: block;
+    margin: 0 auto
+}
+
+.menu_play_alone,
+.menu_play_with_friend {
+    margin: 40px 0;
+}
+
+.menu_main a {
+    transition-duration: 0.4s;
+}
+
+.menu_main a:hover {
+    background-color: #333652;
+    color: #fafafa;
+}
+
+.menu__link {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #f4c84c;
+    width: 20rem;
+    height: 8vh;
+    color: black;
+    text-shadow: 0px 1px 0px black;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 3vh;
+    text-transform: uppercase;
+}
+
+/*<---Computer Page Styling--->*/
+.header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 60px;
+}
+
+.btn_instruction {
+    outline: none;
+}
+
+.btn_instruction {
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-size: 3vh;
+}
+
+.button_instruction {
+    grid-column: 3/4;
+    justify-self: right;
+    align-items: center;
+    margin: 0.5rem 1rem;
+}
+
+/*Styling Main wrapper*/
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(134.34% 134.34% at 50% 0%,
+            #90ADC6 0%,
+            #1f3757 100%);
+}
+
+.scoreboard {
+    width: 700px;
+    height: 150px;
+    border-radius: 15px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.title {
+    padding-left: 30px;
+}
+
+.score {
+    width: 150px;
+    height: 114px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score h1 {
+    color: #565468;
+    font-size: 56px;
+    font-family: "Barlow", sans-serif;
+}
+
+.score p {
+    color: #2a45c2;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    text-align: left;
+}
+
+.hands {
+    visibility: visible;
+    opacity: 1;
+    width: 476px;
+    height: 430px;
+    margin-top: 50px;
+    display: flex;
+    z-index: 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hands img {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.hands .paper {
+    margin-right: 20px;
+}
+
+.hands .scissors {
+    margin-left: 20px;
+}
+
+.scissors {
+    margin-right: 45px;
+}
+
+.hands .hand {
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.hands .hand:hover {
+    transform: translate3d(0px, -8px, 0px);
+}
+
+.contest {
+    display: none;
+    margin-top: 50px;
+    width: 900px;
+}
+
+.contest img {
+    width: 275px;
+    height: 275px;
+}
+
+.contest>div {
+    flex: 1;
+}
+
+.contest h1 {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contest .newGame {
+    color: hsl(229, 25%, 31%);
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.newGame:hover {
+    background: rgb(218, 218, 218);
+    transform: translate3d(0px, -2px, 0px);
+}
+
+.contest .handImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.referee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.referee h1 {
+    font-size: 45px;
+    color: white;
+}
+
+.computerhand {
+    display: flex;
+    flex-direction: column;
+}
