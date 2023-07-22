@@ -18,7 +18,6 @@
 <body>
     <!--Header of the Menu-->
     <header class="header">
-        <!--Rules Button-->
         <div class="quit_button">
             <button class="btn_instruction" aria-label="go to info modal">Quit</button>
         </div>
@@ -27,32 +26,60 @@
         </div>
     </header>
     <!--Main Game-->
-    <main class="main_wrapper">
+    <main class="main_container">
         <div class="scoreboard">
             <div class="title">
                 <h1>Rock<br>
                     Paper<br>
                     Scissors</h1>
             </div>
-            <div class="score">
+            <div id="score">
                 <p>SCORE</p>
                 <h1> 0 </h1>
             </div>
         </div>
         <div class="hands">
-            <div class="hand paper">
-                <img class="hand_img" src="assets/images/paper.jpg">
-            </div>
-            <div class="hand scissors">
-                <img class="img" src="assets/images/scissors.png">
-            </div>
-            <div class="hand rock">
-                <img class="img" src="assets/images/rock.png">
-            </div>
+            <button class="btn-hand" data-choice="paper">
+                <div class="hand" id="paper">
+                    <img class="hand_img" src="assets/images/paper.jpg">
+                </div>
+            </button>
+            <button class="btn-hand" data-choice="scissors">
+                <div class="hand" id="scissors">
+                    <img class="img" src="assets/images/scissors.png">
+                </div>
+            </button>
+            <button class="btn-hand" data-choice="rock">
+                <div class="hand" id="rock">
+                    <img class="img" src="assets/images/rock.png">
+                </div>
+            </button>
         </div>
     </main>
+    <!--Modal Windows-->
+    <aside class="modal modal-hidden" id="modal">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <div class="rule-image">
+            <img src="assets/images/rules-image.png" alt="Rock,paper,scissors rules image">
+        </div>
+    </aside>
+    <aside class="modal modal-hidden" id="modal">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <div class="quit-container">
+            <div class="quit-question">
+                <h2>Are you sure you want to quit the game?</h2>
+                <div class="answers1">
+                    <h3>YES</h3>
+                </div>
+                <div class="answer2">
+                    <h3>NO</h3>
+                </div>
+            </div>
+        </div>
+    </aside>
+
     <footer>
-        footer
+        Coded by Nikoletta Grishaber
     </footer>
     <!---
         <div class="contest">
@@ -80,7 +107,7 @@
 
 
 
-    <script src="main.js"></script>
+    <script src="assets/js/gameAI.js"></script>
 </body>
 
 </html>
