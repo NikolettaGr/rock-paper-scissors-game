@@ -1,15 +1,5 @@
 /* jshint esversion:8 */
-//  Variables
-// Target all buttons,query selector all
-// Modal
-// Get a click, event listener on buttons ,target with for each loop
-// Implement a function to the computer
-// Implement a round function
-// Event listener for play again
-// Quit function shoud activate the modal
-// Finish the game function
 
-// Variables
 let btnInfoOpen = document.querySelector('#info_modal');
 let btnInfoClose = document.querySelector('#close-modal');
 let modal = document.querySelector('#modal');
