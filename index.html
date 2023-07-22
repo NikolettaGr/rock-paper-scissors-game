@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Rock, Paper, Scissors Game</title>
 </head>
 
@@ -20,8 +19,10 @@
   <header class="menu_header">
     <h1 class="menu_title">Rock | Paper | Scissors</h1>
     <h2 class="menu_message">Let's play!</h2>
-    <div class="info_button">
-      <button class="btn_instruction" aria-label="go to info modal"><i class="fa-solid fa-info"></i></button>
+    <div class="info_modal" id="info_modal">
+      <button class="btn_instruction" aria-label="go to info modal">
+        <i class="fa-solid fa-info"></i>
+      </button>
     </div>
   </header>
   <!--Main Menu-->
@@ -36,30 +37,32 @@
       </div>
     </div>
   </main>
-
+  <!--Modal Window-->
   <aside class="modal modal-hidden" id="modal">
     <button class="close-modal" id="close-modal">&times;</button>
     <div class="modal_contact">
       <div class="contact_main">
         <div class="contact_title">
-          The website was developed by</div>
-        <div class="contact_name">Nikoletta Grishaber</div>
+          The website was developed by:</div>
+        <div class="contact_name">
+          Nikoletta Grishaber
+        </div>
       </div>
-      <div class="contact_github contact_icons"><a href="" target="_blank" rel="noopener"
-          aria-label="Visit my github page"><i class="fab fa-github-square icon__contact"></i></a></div>
-      <div class="contact_linkedin contact_icons"><a href="" target="_blank" rel="noopener"
-          aria-label="Visit my linkedin page"><i class="fab fa-linkedin icon_contact"></i></a></div>
+      <div class="contact_icons">
+        <a href="" target="_blank" rel="noopener" aria-label="Visit my github page">
+          <i class="fab fa-github-square icon_contact"></i>
+        </a>
+      </div>
+      <div class="contact_icons">
+        <a href="" target="_blank" rel="noopener" aria-label="Visit my linkedin page">
+          <i class="fab fa-linkedin icon_contact"></i>
+        </a>
+      </div>
     </div>
   </aside>
+  <div class="overlay overlay--hidden" id="overlay"></div>
 
-
-
-
-
-
-
-
-  <script src="main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
