@@ -131,6 +131,10 @@ main {
     margin: 0.5rem 1rem;
 }
 
+.quit_button {
+    padding-top: 0.5rem;
+}
+
 /*Styling Main wrapper*/
 .main_wrapper {
     display: flex;
@@ -145,7 +149,7 @@ main {
 .scoreboard {
     width: 100%;
     max-width: 700px;
-    padding: 1em;
+    padding: 2em;
     height: 150px;
     border-radius: 15px;
     border: 1px solid white;
@@ -156,6 +160,7 @@ main {
 
 .title {
     padding-left: 30px;
+    text-transform: uppercase;
 }
 
 .score {
@@ -177,13 +182,13 @@ main {
 }
 
 .score p {
-    color: #2a45c2;
+    color: black;
     font-size: 16px;
+    letter-spacing: 2px;
     font-style: normal;
-    font-weight: 600;
     line-height: 19px;
-    letter-spacing: 2.5px;
     text-align: left;
+    font-weight: 800;
 }
 
 .hands {
@@ -191,29 +196,29 @@ main {
     opacity: 1;
     width: 100%;
     max-width: 476px;
-    padding: 1em;
+    padding: 4em;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.hands img {
+.hands .img {
     width: 200px;
     height: 200px;
     display: block;
 }
 
-.hands .paper {
+.hand {
     margin-right: 20px;
 }
 
-.hands .scissors {
-    margin-left: 20px;
+.hands .hand_img {
+    width: 220px;
 }
 
 .hands .hand {
     cursor: pointer;
-    transition: all 0.25s;
+    transition: all 0.27s;
 }
 
 .hands .hand:hover {
