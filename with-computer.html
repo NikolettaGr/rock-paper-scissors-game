@@ -19,6 +19,9 @@
     <!--Header of the Menu-->
     <header class="header">
         <!--Rules Button-->
+        <div class="quit_button">
+            <button class="btn_instruction" aria-label="go to info modal">Quit</button>
+        </div>
         <div class="button_instruction" id="button_instruction">
             <button class="btn_instruction" aria-label="go to info modal">Rules</button>
         </div>
@@ -38,13 +41,13 @@
         </div>
         <div class="hands">
             <div class="hand paper">
-                <img src="assets/images/paper.jpg">
+                <img class="hand_img" src="assets/images/paper.jpg">
             </div>
             <div class="hand scissors">
-                <img src="assets/images/scissors.png">
+                <img class="img" src="assets/images/scissors.png">
             </div>
             <div class="hand rock">
-                <img src="assets/images/rock.png">
+                <img class="img" src="assets/images/rock.png">
             </div>
         </div>
     </main>
@@ -63,7 +66,7 @@
                 <div class="decision">
                     <h1> YOU WIN! </h1>
                 </div>
-                <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+                <div class="newGame">PLAY AGAIN</div>
             </div>
         </div>
         <div class="computerhand">
