@@ -1,3 +1,5 @@
+/* jshint esversion:8 */
+
 let btnQuitOpen = document.querySelector('#quit-button');
 let btnRulesOpen = document.querySelector('#button_instruction')
 let btnQuitClose = document.querySelector('#close-modal');
@@ -12,8 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Close modal windows
     btnQuitClose.addEventListener('click', closeModal);
-    btnRulesClose.addEventListener('click', closeModal)
-
+    btnRulesClose.addEventListener('click', closeModal);
 });
 
 /**
@@ -31,3 +32,40 @@ let closeModal = function () {
     modal.classList.add('modal-hidden');
     overlay.classList.add('overlay--hidden');
 };
+
+
+/**
+ * Game Logic
+ */
+const choiceButtons = document.querySelectorAll('.btn-hand');
+const divGame = document.querySelector('.hands');
+
+const choices = [
+    {
+        name: "rock",
+        beats: "scissors"
+    },
+    {
+        name: "paper",
+        beats: "rock"
+    },
+    {
+        name: "scissors",
+        beats: "paper"
+    }
+];
+
+choiceButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        const nameChoice = button.dataset.choice;
+        const choice = choices.find(function (choice) {
+            return choice.name === nameChoice;
+        });
+        choose(choice);
+
+        console.log("Clicked!", choice);
+    });
+});
+
+
+
