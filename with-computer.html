@@ -18,7 +18,7 @@
 <body>
     <!--Header of the Menu-->
     <header class="header">
-        <div class="quit_button">
+        <div class="quit_button" id="quit-button">
             <button class="btn_instruction" aria-label="go to info modal">Quit</button>
         </div>
         <div class="button_instruction" id="button_instruction">
@@ -31,7 +31,8 @@
             <div class="title">
                 <h1>Rock<br>
                     Paper<br>
-                    Scissors</h1>
+                    Scissors
+                </h1>
             </div>
             <div id="score">
                 <p>SCORE</p>
@@ -56,18 +57,33 @@
             </button>
         </div>
     </main>
-    <!--Modal Windows-->
-    <aside class="modal modal-hidden" id="modal">
-        <button class="close-modal" id="close-modal">&times;</button>
-        <div class="rule-image">
-            <img src="assets/images/rules-image.png" alt="Rock,paper,scissors rules image">
+    <!--Hidden results-->
+    <div class="results hidden">
+        <div class="user-choice">
+            <h1>YOU PICKED</h1>
+            <div class="user-choice-hand">
+                <img id="user-choice-image" src="">
+            </div>
         </div>
-    </aside>
+        <div class="referee">
+            <div class="result">
+                <h1> YOU WIN! </h1>
+            </div>
+            <div class="play-again">PLAY AGAIN</div>
+        </div>
+    </div>
+    <div class="computer-choice">
+        <h1>THE COMPUTER PICKED</h1>
+        <div class="user-choice-hand">
+            <img id="computer-choice-image" src="">
+        </div>
+    </div>
+    <!--Modal Windows-->
     <aside class="modal modal-hidden" id="modal">
         <button class="close-modal" id="close-modal">&times;</button>
         <div class="quit-container">
             <div class="quit-question">
-                <h2>Are you sure you want to quit the game?</h2>
+                <h2>Are you sure you want to quit?</h2>
                 <div class="answers1">
                     <h3>YES</h3>
                 </div>
@@ -77,7 +93,14 @@
             </div>
         </div>
     </aside>
-
+    <div class="overlay overlay--hidden" id="overlay"></div>
+    <aside class="modal modal-hidden" id="modal">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <div class="rule-image">
+            <img src="assets/images/rules-image.png" alt="Rock,paper,scissors rules image">
+        </div>
+    </aside>
+    <div class="overlay overlay--hidden" id="overlay"></div>
     <footer>
         Coded by Nikoletta Grishaber
     </footer>
@@ -90,14 +113,14 @@
                 </div>
             </div>
             <div class="referee">
-                <div class="decision">
+                <div class="result">
                     <h1> YOU WIN! </h1>
                 </div>
-                <div class="newGame">PLAY AGAIN</div>
+                <div class="play-again">PLAY AGAIN</div>
             </div>
         </div>
         <div class="computerhand">
-            <h1>THE HOUSE PICKED</h1>
+            <h1>THE COMPUTER PICKED</h1>
             <div class="handImageContainer">
                 <img id="computerPickImage" src="">
             </div>
