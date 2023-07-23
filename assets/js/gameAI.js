@@ -39,21 +39,31 @@ let closeModal = function () {
  */
 const choiceButtons = document.querySelectorAll('.btn-hand');
 const divGame = document.querySelector('.hands');
+const divResults = document.querySelector('.results');
+const scoreElement = document.getElementById('score');
+const userChoice = document.getElementById('user-choice-image');
+const computerChoiceElement = document.getElementById('computer-choice-image');
+const gameResult = document.querySelector('.decision');
 
 const choices = [
     {
         name: "rock",
+        img: "assets/images/rock.png",
         beats: "scissors"
     },
     {
         name: "paper",
+        img: "assets/images/paper.jpg",
         beats: "rock"
     },
     {
         name: "scissors",
+        img: "assets/images/scissors.png",
         beats: "paper"
     }
 ];
+
+let score = 0;
 
 choiceButtons.forEach(function (button) {
     button.addEventListener('click', function () {
@@ -66,6 +76,19 @@ choiceButtons.forEach(function (button) {
         console.log("Clicked!", choice);
     });
 });
+
+function choose(choice) {
+    const computerChoice = aiChoose();
+    /*displayResults([choice, computerChoice]);
+    displayWinner([choice, computerChoice]);*/
+    console.log(computerChoice);
+};
+
+function aiChoose() {
+    const random = Math.floor(Math.random() * choices.length);
+    return choices[random];
+};
+
 
 
 
