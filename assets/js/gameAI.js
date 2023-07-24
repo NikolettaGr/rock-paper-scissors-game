@@ -3,33 +3,44 @@
 let btnQuitOpen = document.querySelector('#quit-button');
 let btnRulesOpen = document.querySelector('#button_instruction')
 let btnQuitClose = document.querySelector('#close-modal');
-let btnRulesClose = document.querySelector('#close-modal');
-let modal = document.querySelector('#modal');
+let btnRulesClose = document.querySelector('#close-modal-rules');
+let modalQuit = document.querySelector('#modal-quit');
+let modalRules = document.querySelector('#modal-rules');
 let overlay = document.querySelector('#overlay');
 
 document.addEventListener('DOMContentLoaded', function () {
     // Open modal windows
-    btnQuitOpen.addEventListener('click', openModal);
-    btnRulesOpen.addEventListener('click', openModal)
+    btnQuitOpen.addEventListener('click', openModalQuit);
+    btnRulesOpen.addEventListener('click', openModalRules)
 
     // Close modal windows
-    btnQuitClose.addEventListener('click', closeModal);
-    btnRulesClose.addEventListener('click', closeModal);
+    btnQuitClose.addEventListener('click', closeModalQuit);
+    btnRulesClose.addEventListener('click', closeModalRules);
 });
 
 /**
  * Function to open modal windows
  */
-let openModal = function () {
-    modal.classList.remove('modal-hidden');
+let openModalQuit = function () {
+    btnQuitOpen.classList.remove('modal-hidden');
+    overlay.classList.remove('overlay--hidden');
+};
+
+let openModalRules = function () {
+    modalRules.classList.remove('modal-hidden');
     overlay.classList.remove('overlay--hidden');
 };
 
 /**
  * Function to close modal windows
  */
-let closeModal = function () {
-    modal.classList.add('modal-hidden');
+let closeModalQuit = function () {
+    btnQuitOpen.classList.add('modal-hidden');
+    overlay.classList.add('overlay--hidden');
+};
+
+let closeModalRules = function () {
+    modalRules.classList.add('modal-hidden');
     overlay.classList.add('overlay--hidden');
 };
 
@@ -41,8 +52,8 @@ const choiceButtons = document.querySelectorAll('.btn-hand');
 const divGame = document.querySelector('.hands');
 const divResults = document.querySelector('.results');
 const resultDiv = document.querySelector('.choice-hand');
-const scoreUser = document.getElementById("score1 h1");
-const scoreAI = document.getElementById("score2 h1");
+const scoreUserContainer = document.getElementById("score-user");
+const scoreAIContainer = document.getElementById("score-computer");
 const userChoiceElement = document.getElementById("user-choice-image");
 const computerChoiceElement = document.getElementById("computer-choice-image");
 const gameResult = document.querySelector('.decision h1');
@@ -82,6 +93,11 @@ choiceButtons.forEach(function (button) {
 });
 
 function userChoose(choice) {
+    console.log(choice);
+    console.log('userScore', userScore);
+    console.log('AIscore', AIscore)
+    console.log('scoreAIContainer', scoreAIContainer);
+    console.log('scoreUserContainer', scoreUserContainer);
     const computerChoice = aiChoose();
     divGame.style.display = "none";
     divResults.style.display = "flex";
@@ -91,14 +107,22 @@ function userChoose(choice) {
 
 
     if (choice.name === computerChoice.beats) {
+        console.log('userScore', userScore);
+        console.log('AIscore', AIscore)
         gameResult.innerHTML = "YOU LOSE! 😔";
         AIscore++;
-        scoreAI.innerHTML = AIscore;
+        console.log('userScore', userScore);
+        console.log('AIscore', AIscore)
+        scoreAIContainer.innerHTML = AIscore;
 
     } else if (choice.beats === computerChoice.name) {
         gameResult.innerHTML = "YOU WIN! 🎉";
+        console.log('userScore', userScore);
+        console.log('AIscore', AIscore)
         userScore++;
-        scoreUser.innerHTML = userScore;
+        console.log('userScore', userScore);
+        console.log('AIscore', AIscore)
+        scoreUserContainer.innerHTML = userScore;
     } else {
         gameResult.innerHTML = "IT'S A TIE! 🤪";
     }
