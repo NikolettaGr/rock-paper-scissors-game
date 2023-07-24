@@ -184,6 +184,8 @@ main {
 }
 
 /*<---Computer Page Styling--->*/
+
+/*Header*/
 .header {
     grid-column: 1/4;
     grid-row: 1/2;
@@ -223,6 +225,27 @@ main {
 
 .quit_button {
     padding-top: 0.5rem;
+}
+
+/*Modal Styling*/
+.quit-question {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.quit-question a {
+    text-decoration: none;
+}
+
+.quit-question h3:hover {
+    color: #f4c84c;
+}
+
+.quit-container h2,
+.answer1 h3,
+.answer2 h3 {
+    color: #fafafa;
 }
 
 /*Styling Main Container*/
@@ -482,4 +505,31 @@ main {
 
 .hidden {
     display: none;
+}
+
+/* Media for Tablets */
+@media (max-width: 771px) {
+    .hands {
+        display: flex;
+    }
+
+    .hands .img {
+        width: 130px;
+        height: 130px;
+        display: block;
+    }
+
+    .hands .hand_img {
+        width: 144px;
+    }
+}
+
+/*Media for mobile*/
+@media screen and (max-width: 414px) {
+    .hands {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
