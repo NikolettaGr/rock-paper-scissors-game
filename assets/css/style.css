@@ -19,10 +19,6 @@ body {
             #90ADC6 0%,
             #1f3757 100%);
     min-height: 100vh;
-    /*display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
-    font-family: monospace;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +33,7 @@ main {
     width: 100%;
 }
 
-/*----Header---*/
+/*-Header-*/
 .menu_header {
     grid-column: 1/4;
     grid-row: 1/2;
@@ -57,7 +53,7 @@ main {
     font-size: 4vh;
 }
 
-/*---Menu Main---*/
+/*-Menu Main-*/
 .menu_main {
     grid-column: 1/4;
     grid-row: 2/4;
@@ -75,8 +71,7 @@ main {
     margin: 0 auto
 }
 
-.menu_play_alone,
-.menu_play_with_friend {
+.menu_play {
     margin: 40px 0;
 }
 
@@ -89,7 +84,7 @@ main {
     color: #fafafa;
 }
 
-.menu__link {
+.menu-link {
     display: inline-block;
     padding: 15px 20px;
     background-color: #f4c84c;
@@ -102,6 +97,90 @@ main {
     text-align: center;
     font-size: 3vh;
     text-transform: uppercase;
+}
+
+/*-Styling modal-*/
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+}
+
+.overlay--hidden {
+    display: none;
+}
+
+.modal {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30em;
+    height: 25rem;
+    border-radius: 8px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.7);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.9rem;
+    font-size: 3rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+}
+
+.modal-hidden {
+    display: none;
+}
+
+/*-Modal Info-*/
+.modal_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact_main {
+    text-align: center;
+}
+
+.contact_title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fafafa;
+}
+
+.contact_name {
+    font-size: 1.8rem;
+    color: #fafafa;
+    margin-top: 10px;
+}
+
+.contact_icons {
+    display: flex;
+}
+
+.contact_icons i:hover {
+    color: #fafafa;
+}
+
+.icon_contact {
+    color: lightskyblue;
+    font-size: 50px;
+    margin-top: 30px;
 }
 
 /*<---Computer Page Styling--->*/
@@ -117,11 +196,22 @@ main {
 }
 
 .btn_instruction {
-    padding: 10px;
+    padding: 15px;
     display: flex;
     align-content: center;
     align-items: center;
     font-size: 3vh;
+    background-color: #f4c84c;
+    border-radius: 8px;
+    border: none;
+    width: 5rem;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+.btn_instruction:hover {
+    background-color: #333652;
+    color: #fafafa;
 }
 
 .button_instruction {
@@ -135,8 +225,8 @@ main {
     padding-top: 0.5rem;
 }
 
-/*Styling Main wrapper*/
-.main_wrapper {
+/*Styling Main Container*/
+.main_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,12 +248,8 @@ main {
     align-items: center;
 }
 
-.title {
-    padding-left: 30px;
-    text-transform: uppercase;
-}
-
-.score {
+#score1,
+#score2 {
     width: 150px;
     height: 114px;
     background-color: white;
@@ -176,12 +262,14 @@ main {
     align-items: center;
 }
 
-.score h1 {
+#score1 h1,
+#score2 h1 {
     color: #565468;
     font-size: 56px;
 }
 
-.score p {
+#score1 p,
+#score2 p {
     color: black;
     font-size: 16px;
     letter-spacing: 2px;
@@ -225,22 +313,31 @@ main {
     transform: translate3d(0px, -8px, 0px);
 }
 
-.contest {
+.btn-hand {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/*Hidden results*/
+.results {
     display: none;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 50px;
     width: 900px;
 }
 
-.contest img {
-    width: 275px;
-    height: 275px;
+.results img {
+    width: 260px;
+    height: 260px;
 }
 
-.contest>div {
+.results>div {
     flex: 1;
 }
 
-.contest h1 {
+.results h1 {
     color: white;
     font-size: 20px;
     margin-top: 20px;
@@ -248,21 +345,21 @@ main {
     text-align: center;
 }
 
-.contest .newGame {
-    color: hsl(229, 25%, 31%);
+.results .play-again {
+    color: black;
     background-color: white;
     padding: 12px 24px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.15s;
 }
 
-.newGame:hover {
+.play-again:hover {
     background: rgb(218, 218, 218);
     transform: translate3d(0px, -2px, 0px);
 }
 
-.contest .handImageContainer {
+.results .choice-hand {
     display: flex;
     justify-content: center;
 }
@@ -279,7 +376,7 @@ main {
     color: white;
 }
 
-.computerhand {
+.computer-choice {
     display: flex;
     flex-direction: column;
 }
