@@ -244,6 +244,7 @@ main {
 
 .quit_button {
     padding-top: 0.5rem;
+    margin-left: 15px;
 }
 
 /*Modal Styling*/
@@ -297,7 +298,6 @@ main {
     background-color: white;
     border: 1px solid white;
     border-radius: 8px;
-    margin-right: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -429,20 +429,25 @@ main {
 }
 
 /*---With Friend Page--*/
-
-/* LAYOUT */
-#main_friend {
-    position: relative;
-    width: 80rem;
-    height: 35rem;
+.main_friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     background: radial-gradient(134.34% 134.34% at 50% 0%,
             #90ADC6 0%,
             #1f3757 100%);
-    backdrop-filter: blur(200px);
+}
+
+#main_friend {
+    position: relative;
+    width: 80rem;
+    background: radial-gradient(134.34% 134.34% at 50% 0%,
+            #90ADC6 0%,
+            #1f3757 100%);
     filter: blur();
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
     border-radius: 9px;
-    overflow: hidden;
     display: flex;
 }
 
@@ -454,81 +459,51 @@ main {
     transition: all 0.75s;
 }
 
-/* ELEMENTS */
-.name {
-    position: relative;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 300;
-    margin-bottom: 1rem;
-}
-
+/*----Styling With-friend Page----*/
 .hands_friend {
-    width: 476px;
-    height: 400px;
-    margin-top: 100px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
 }
 
 .hands_friend img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     display: block;
 }
 
-.player--active {
-    background-color: rgba(255, 255, 255, 0.4);
+.hand {
+    margin-right: 20px;
 }
 
-.player--active .name {
-    font-weight: 700;
+.hands_friend .scissors {
+    margin-right: 25px;
 }
 
-.player--active .score {
-    font-weight: 400;
+.hands_friend .hand_image {
+    width: 220px;
+    height: 210px;
 }
 
-.player--active .current {
-    opacity: 1;
+.hands_friend .hand {
+    cursor: pointer;
+    transition: all 0.27s;
 }
 
-.current {
-    background-color: #c7365f;
-    opacity: 0.8;
-    border-radius: 9px;
-    color: #fff;
-    width: 65%;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.75s;
+.hands_friend .hand:hover {
+    transform: translate3d(0px, -8px, 0px);
 }
 
-.current-label {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-size: 1.7rem;
-    color: #ddd;
+.player {
+    padding-bottom: 30px;
 }
 
-.current-score {
-    font-size: 3.5rem;
+.player h2 {
+    font-size: 2rem;
 }
 
-.player--winner {
-    background-color: #2f2f2f;
-}
-
-.player--winner .name {
-    font-weight: 700;
-    color: #c7365f;
-}
-
-.hidden {
-    display: none;
+.name {
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 /*Footer*/
