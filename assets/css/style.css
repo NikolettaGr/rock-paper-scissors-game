@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    font-family: monospace;
 }
 
 main {
@@ -99,7 +100,7 @@ main {
     text-transform: uppercase;
 }
 
-/*-Styling modal-*/
+/*Styling modal*/
 .overlay {
     height: 100vh;
     width: 100vw;
@@ -126,6 +127,7 @@ main {
     height: 25rem;
     border-radius: 8px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.7);
+    background-color: #ddd;
 }
 
 .close-modal {
@@ -160,12 +162,12 @@ main {
 .contact_title {
     font-size: 2rem;
     font-weight: bold;
-    color: #fafafa;
+    color: black;
 }
 
 .contact_name {
     font-size: 1.8rem;
-    color: #fafafa;
+    color: black;
     margin-top: 10px;
 }
 
@@ -174,11 +176,11 @@ main {
 }
 
 .contact_icons i:hover {
-    color: #fafafa;
+    color: #90ADC6;
 }
 
 .icon_contact {
-    color: lightskyblue;
+    color: blue;
     font-size: 50px;
     margin-top: 30px;
 }
@@ -209,9 +211,26 @@ main {
     width: 5rem;
     text-align: center;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.btn_instruction:hover {
+.btn_info {
+    padding: 15px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-size: 3vh;
+    background-color: #f4c84c;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.btn_instruction:hover,
+.btn_info:hover {
     background-color: #333652;
     color: #fafafa;
 }
@@ -404,6 +423,11 @@ main {
     flex-direction: column;
 }
 
+.rule-image img {
+    width: 300px;
+    height: 300px;
+}
+
 /*---With Friend Page--*/
 
 /* LAYOUT */
@@ -507,6 +531,13 @@ main {
     display: none;
 }
 
+/*Footer*/
+footer {
+    color: #fafafa;
+    font-size: 15px;
+    padding: 10px;
+}
+
 /* Media for Tablets */
 @media (max-width: 771px) {
     .hands {
@@ -522,6 +553,23 @@ main {
     .hands .hand_img {
         width: 144px;
     }
+
+    .results {
+        width: 450px;
+    }
+
+    .results img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .decision {
+        width: 100px;
+    }
+
+    .decision h1 {
+        font-size: 30px;
+    }
 }
 
 /*Media for mobile*/
@@ -532,4 +580,17 @@ main {
         justify-content: center;
         align-items: center;
     }
+
+    .results {
+        width: 400px;
+    }
+
+    #scissors {
+        margin-bottom: 9px;
+    }
+
+    .btn_instruction {
+        margin-left: 15px;
+    }
+
 }
