@@ -28,14 +28,12 @@
     <!--Main Game-->
     <main class="main_container">
         <div class="scoreboard">
-            <div class="title">
-                <h1>Rock<br>
-                    Paper<br>
-                    Scissors
-                </h1>
+            <div id="score1">
+                <p>YOUR SCORE</p>
+                <h1> 0 </h1>
             </div>
-            <div id="score">
-                <p>SCORE</p>
+            <div id="score2">
+                <p>AI SCORE</p>
                 <h1> 0 </h1>
             </div>
         </div>
@@ -57,27 +55,29 @@
             </button>
         </div>
     </main>
+
     <!--Hidden results-->
-    <div class="results hidden">
+    <div class="results">
         <div class="user-choice">
             <h1>YOU PICKED</h1>
-            <div class="user-choice-hand">
+            <div class="choice-hand">
                 <img id="user-choice-image" src="">
             </div>
         </div>
         <div class="referee">
-            <div class="result">
+            <div class="decision">
                 <h1> YOU WIN! </h1>
             </div>
             <div class="play-again">PLAY AGAIN</div>
         </div>
-    </div>
-    <div class="computer-choice">
-        <h1>THE COMPUTER PICKED</h1>
-        <div class="user-choice-hand">
-            <img id="computer-choice-image" src="">
+        <div class="computer-choice">
+            <h1>THE COMPUTER PICKED</h1>
+            <div class="choice-hand">
+                <img id="computer-choice-image" src="">
+            </div>
         </div>
     </div>
+
     <!--Modal Windows-->
     <aside class="modal modal-hidden" id="modal">
         <button class="close-modal" id="close-modal">&times;</button>
@@ -104,31 +104,6 @@
     <footer>
         Coded by Nikoletta Grishaber
     </footer>
-    <!---
-        <div class="contest">
-            <div class="userhand">
-                <h1>YOU PICKED</h1>
-                <div class="handImageContainer">
-                    <img id="userPickImage" src="">
-                </div>
-            </div>
-            <div class="referee">
-                <div class="result">
-                    <h1> YOU WIN! </h1>
-                </div>
-                <div class="play-again">PLAY AGAIN</div>
-            </div>
-        </div>
-        <div class="computerhand">
-            <h1>THE COMPUTER PICKED</h1>
-            <div class="handImageContainer">
-                <img id="computerPickImage" src="">
-            </div>
-        </div>
-        --->
-
-
-
 
     <script src="assets/js/gameAI.js"></script>
 </body>
