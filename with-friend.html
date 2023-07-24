@@ -18,37 +18,106 @@
 <body class="body_friend">
     <!--Header of the Menu-->
     <header class="header">
-        <!--Rules Button-->
+        <div class="quit_button" id="quit-button">
+            <button class="btn_instruction" aria-label="go to info modal">Quit</button>
+        </div>
         <div class="button_instruction" id="button_instruction">
             <button class="btn_instruction" aria-label="go to info modal">Rules</button>
         </div>
     </header>
     <main id="main_friend">
-        <section class="player player--0 player--active">
-            <h2 class="name" id="name--0">Player 1</h2>
-            <div class="hands_friend">
-                <div class="hand paper">
-                    <img src="assets/images/paper.jpg">
-                </div>
-                <div class="hand scissors">
-                    <img src="assets/images/scissors.png">
-                </div>
-                <div class="hand rock">
-                    <img src="assets/images/rock.png">
+        <div class="scoreboard">
+            <div id="score1">
+                <p>SCORE P1</p>
+                <h2 id="score-player1"> 0 </h2>
+            </div>
+            <div id="score2">
+                <p>SCORE P2</p>
+                <h2 id="score-player2"> 0 </h2>
+            </div>
+        </div>
+        <div class="content">
+            <div class="player player-0">
+                <h2 class="name" id="name-0">Player 1</h2>
+                <div class="hands_friend">
+                    <div class="hand paper">
+                        <img src="assets/images/paper.jpg" class="hand_image">
+                    </div>
+                    <div class="hand scissors">
+                        <img src="assets/images/scissors.png">
+                    </div>
+                    <div class="hand rock">
+                        <img src="assets/images/rock.png">
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="player player--1">
-            <h2 class="name" id="name--1">Player 2</h2>
-            <div class="hands_friend">
-                <div class="hand paper">
-                    <img src="assets/images/paper.jpg">
-                </div>
-                <div class="hand scissors">
-                    <img src="assets/images/scissors.png">
-                </div>
-                <div class="hand rock">
-                    <img src="assets/images/rock.png">
+            <hr>
+            <div class="player player-1">
+                <h2 class="name" id="name-1">Player 2</h2>
+                <div class="hands_friend">
+                    <div class="hand paper">
+                        <img src="assets/images/paper.jpg" class="hand_image">
+                    </div>
+                    <div class="hand scissors">
+                        <img src="assets/images/scissors.png">
+                    </div>
+                    <div class="hand rock">
+                        <img src="assets/images/rock.png">
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </main>
+
+    <!--Hidden results-->
+    <div class="results">
+        <div class="user-choice">
+            <h1>PLAYER 1 PICKED</h1>
+            <div class="choice-hand">
+                <img id="player1-choice-image" src="">
+            </div>
+        </div>
+        <div class="referee">
+            <div class="decision">
+                <h1> YOU WIN! </h1>
+            </div>
+            <div class="play-again">PLAY AGAIN</div>
+        </div>
+        <div class="computer-choice">
+            <h1>PLAYER 2 PICKED</h1>
+            <div class="choice-hand">
+                <img id="player2-choice-image" src="">
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Windows-->
+    <aside class="modal modal-hidden" id="modal-quit">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <div class="quit-container">
+            <h2>Are you sure you want to quit?</h2>
+            <div class="quit-question">
+                <div class="answer1">
+                    <a href="index.html" aria-label="go to main page">
+                        <h3>YES</h3>
+                    </a>
+                </div>
+                <div class="answer2">
+                    <a href="with-computer.html" aria-label="stay on game page">
+                        <h3>NO</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="overlay overlay--hidden" id="overlay"></div>
+    <aside class="modal modal-hidden" id="modal-rules">
+        <button class="close-modal" id="close-modal-rules">&times;</button>
+        <div class="rule-image">
+            <img src="assets/images/rules-image.png" alt="Rock,paper,scissors rules image">
+        </div>
+    </aside>
+    <div class="overlay overlay--hidden" id="overlay"></div>
+    <footer>
+        Coded by Nikoletta Grishaber
+    </footer>
