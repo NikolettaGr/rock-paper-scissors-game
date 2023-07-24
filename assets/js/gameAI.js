@@ -40,30 +40,34 @@ let closeModal = function () {
 const choiceButtons = document.querySelectorAll('.btn-hand');
 const divGame = document.querySelector('.hands');
 const divResults = document.querySelector('.results');
-const scoreElement = document.getElementById('score');
-const userChoice = document.getElementById('user-choice-image');
-const computerChoiceElement = document.getElementById('computer-choice-image');
-const gameResult = document.querySelector('.decision');
+const resultDiv = document.querySelector('.choice-hand');
+const scoreUser = document.getElementById('score1 h1');
+const scoreAI = document.getElementById('score2 h1');
+const userChoiceElement = document.getElementById("user-choice-image");
+const computerChoiceElement = document.getElementById("computer-choice-image");
+const gameResult = document.querySelector('.decision h1');
+const playAgainButton = document.querySelector('.play-again');
 
 const choices = [
     {
         name: "rock",
-        img: "assets/images/rock.png",
+        imageSrc: "assets/images/rock.png",
         beats: "scissors"
     },
     {
         name: "paper",
-        img: "assets/images/paper.jpg",
+        imageSrc: "assets/images/paper.jpg",
         beats: "rock"
     },
     {
         name: "scissors",
-        img: "assets/images/scissors.png",
+        imageSrc: "assets/images/scissors.png",
         beats: "paper"
     }
 ];
 
-let score = 0;
+let userScore = 0;
+let AIscore = 0;
 
 choiceButtons.forEach(function (button) {
     button.addEventListener('click', function () {
@@ -71,23 +75,51 @@ choiceButtons.forEach(function (button) {
         const choice = choices.find(function (choice) {
             return choice.name === nameChoice;
         });
-        choose(choice);
+        userChoose(choice);
 
         console.log("Clicked!", choice);
     });
 });
 
-function choose(choice) {
+function userChoose(choice) {
     const computerChoice = aiChoose();
-    /*displayResults([choice, computerChoice]);
-    displayWinner([choice, computerChoice]);*/
+    divGame.style.display = "none";
+    divResults.style.display = "flex";
+    userChoiceElement.src = choice.imageSrc;
+    computerChoiceElement.src = computerChoice.imageSrc;
     console.log(computerChoice);
+
+
+    if (choice.name === computerChoice.beats) {
+        gameResult.innerHTML = "YOU LOSE! 😔";
+        AIscore++;
+        scoreAI.innerHTML = AIscore;
+
+    } else if (choice.beats === computerChoice.name) {
+        gameResult.innerHTML = "YOU WIN! 🎉";
+        userScore++;
+        scoreUser.innerHTML = userScore;
+    } else {
+        gameResult.innerHTML = "IT'S A TIE! 🤪";
+    }
 };
 
 function aiChoose() {
     const random = Math.floor(Math.random() * choices.length);
     return choices[random];
 };
+
+playAgainButton.addEventListener('click', function () {
+    divGame.style.display = "flex";
+    divResults.style.display = "none";
+});
+
+
+
+
+
+
+
 
 
 
