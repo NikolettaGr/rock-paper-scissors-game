@@ -91,9 +91,9 @@ let gameResult = null;
 const handlePlayer1Choice = (choiceName) => {
     player1Choice = choices.find((choice) => choice.name === choiceName);
     player1ChoiceImage.src = player1Choice.imageSrc;
-    resultsDiv.style.display = "none"; // Hide previous result
-    refereeText.innerText = "Waiting for Player 2..."; // Set referee text
-    refereeDiv.style.display = "block"; // Show referee message
+    resultsDiv.style.display = "none";
+    refereeText.innerText = "Waiting for Player 2...";
+    refereeDiv.style.display = "block";
     player0Div.innerHTML = `<h2 class='name' id='name-0'>Player 1</h2><p class='waiting-text'>Waiting for player 2 to choose...</p>`;
 };
 
@@ -102,8 +102,8 @@ const handlePlayer1Choice = (choiceName) => {
 const handlePlayer2Choice = (choiceName) => {
     player2Choice = choices.find((choice) => choice.name === choiceName);
     player2ChoiceImage.src = player2Choice.imageSrc;
-    refereeText.innerText = "Result:"; // Update referee text
-    playAgainButton.style.display = "block"; // Show play again button
+    refereeText.innerText = "Result:";
+    playAgainButton.style.display = "block";
     scoreUpdate();
 };
 
@@ -123,7 +123,7 @@ function scoreUpdate() {
         refereeText.innerText = gameResult;
         refereeDiv.style.display = "block";
     }
-}
+};
 
 // Event listeners for player choices
 player1Buttons.forEach((button) => {
@@ -147,4 +147,14 @@ player2Buttons.forEach((button) => {
         contentDiv.style.display = "none";
         resultsDiv.style.display = "flex";
     });
+});
+
+/// Event listener for play again button
+playAgainButton.addEventListener("click", function () {
+    resultsDiv.style.display = "none";
+    contentDiv.style.display = "block";
+    refereeDiv.style.display = "none";
+
+    player0Div.innerHTML = player1OriginalContent;
+    player1Div.innerHTML = player2OriginalContent;
 });
