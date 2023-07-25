@@ -48,6 +48,7 @@ let closeModalRules = function () {
 /**
  * Game Logic
  */
+
 // Get DOM elements and assign them to variables
 const player1Buttons = document.querySelectorAll(".player-0 .hand");
 const player2Buttons = document.querySelectorAll(".player-1 .hand");
@@ -126,15 +127,16 @@ function scoreUpdate() {
     }
 };
 
-// Event listeners for player choices
+/// Event listeners for player choices
+
+//Player 1
 player1Buttons.forEach((button) => {
     button.addEventListener("click", function () {
         handlePlayer1Choice(button.classList[1]);
     });
 });
 
-
-
+//Player 2
 player2Buttons.forEach((button) => {
     button.addEventListener("click", function () {
         handlePlayer2Choice(button.classList[1]);
@@ -144,7 +146,7 @@ player2Buttons.forEach((button) => {
     });
 });
 
-/// Event listener for play again button
+// Event listener for play again button
 playAgainButton.addEventListener("click", function () {
     resultsDiv.style.display = "none";
     contentDiv.style.display = "block";
