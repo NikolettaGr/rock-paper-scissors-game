@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
  * Function to open modal windows
  */
 let openModalQuit = function () {
-    btnQuitOpen.classList.remove('modal-hidden');
+    console.log('openModalQuit');
+    console.log('btnQuitOpen', btnQuitOpen);
+    modalQuit.classList.remove('modal-hidden');
     overlay.classList.remove('overlay--hidden');
 };
 
@@ -36,7 +38,9 @@ let openModalRules = function () {
  * Function to close modal windows
  */
 let closeModalQuit = function () {
-    btnQuitOpen.classList.add('modal-hidden');
+    console.log('closeModalQuit');
+    console.log('btnQuitOpen', btnQuitOpen);
+    modalQuit.classList.add('modal-hidden');
     overlay.classList.add('overlay--hidden');
 };
 
@@ -73,7 +77,7 @@ const choices = [
     },
     {
         name: "paper",
-        imageSrc: "paper.jpg",
+        imageSrc: "paper.png",
         beats: "rock"
     },
     {
@@ -126,6 +130,7 @@ function scoreUpdate() {
         refereeDiv.style.display = "block";
     }
 };
+
 
 /// Event listeners for player choices
 
