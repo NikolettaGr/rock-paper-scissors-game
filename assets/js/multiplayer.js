@@ -86,3 +86,23 @@ let player2Score = 0;
 let player1Choice = null;
 let player2Choice = null;
 let gameResult = null;
+
+// Function to handle Player 1's choice
+const handlePlayer1Choice = (choiceName) => {
+    player1Choice = choices.find((choice) => choice.name === choiceName);
+    player1ChoiceImage.src = player1Choice.imageSrc;
+    resultsDiv.style.display = "none"; // Hide previous result
+    refereeText.innerText = "Waiting for Player 2..."; // Set referee text
+    refereeDiv.style.display = "block"; // Show referee message
+    player0Div.innerHTML = `<h2 class='name' id='name-0'>Player 1</h2><p class='waiting-text'>Waiting for player 2 to choose...</p>`;
+};
+
+
+// Function to handle Player 2's choice
+const handlePlayer2Choice = (choiceName) => {
+    player2Choice = choices.find((choice) => choice.name === choiceName);
+    player2ChoiceImage.src = player2Choice.imageSrc;
+    refereeText.innerText = "Result:"; // Update referee text
+    playAgainButton.style.display = "block"; // Show play again button
+    scoreUpdate();
+};
