@@ -1,4 +1,4 @@
-/*------Global styles------*/
+/*-----> Global styles <-----*/
 *,
 *::before,
 *::after {
@@ -7,8 +7,7 @@
     box-sizing: border-box;
 }
 
-
-/*------Styling Main Page------*/
+/*-----> Styling Main Page <-----*/
 
 .menu_image {
     width: 140px;
@@ -34,7 +33,7 @@ main {
     width: 100%;
 }
 
-/*-Header-*/
+/*Header*/
 .menu_header {
     grid-column: 1/4;
     grid-row: 1/2;
@@ -54,7 +53,7 @@ main {
     font-size: 4vh;
 }
 
-/*-Menu Main-*/
+/*Menu Main*/
 .menu_main {
     grid-column: 1/4;
     grid-row: 2/4;
@@ -138,14 +137,13 @@ main {
     cursor: pointer;
     border: none;
     background: none;
-
 }
 
 .modal-hidden {
     display: none;
 }
 
-/*-Modal Info-*/
+/*Modal Info*/
 .modal_contact {
     display: flex;
     flex-direction: column;
@@ -185,7 +183,7 @@ main {
     margin-top: 30px;
 }
 
-/*<---Computer Page Styling--->*/
+/*----> Styling "with-computer" page <----*/
 
 /*Header*/
 .header {
@@ -227,7 +225,6 @@ main {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-
 
 .btn_instruction:hover,
 .btn_info:hover {
@@ -433,29 +430,7 @@ main {
     color: #f4c84c;
 }
 
-/*---With Friend Page--*/
-.main_friend {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: radial-gradient(134.34% 134.34% at 50% 0%,
-            #90ADC6 0%,
-            #1f3757 100%);
-}
-
-#main_friend {
-    position: relative;
-    width: 80rem;
-    background: radial-gradient(134.34% 134.34% at 50% 0%,
-            #90ADC6 0%,
-            #1f3757 100%);
-    filter: blur();
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-    border-radius: 9px;
-    display: flex;
-}
-
+/*----> Styling With-friend Page <----*/
 .player {
     flex: 50%;
     display: flex;
@@ -464,7 +439,6 @@ main {
     transition: all 0.75s;
 }
 
-/*----Styling With-friend Page----*/
 .hands_friend {
     display: flex;
     flex-direction: row;
@@ -478,15 +452,6 @@ main {
 
 .hand {
     margin-right: 20px;
-}
-
-.hands_friend .scissors {
-    margin-right: 25px;
-}
-
-.hands_friend .hand_image {
-    width: 220px;
-    height: 210px;
 }
 
 .hands_friend .hand {
@@ -511,14 +476,18 @@ main {
     padding-top: 10px;
 }
 
-/*Footer*/
+/*----> Footer <----*/
 footer {
     color: #fafafa;
     font-size: 15px;
     padding: 10px;
 }
 
-/* Media for Tablets */
+/*----> Media Queries <----*/
+
+/*--Media for with-computer page--*/
+
+/*Media for tablets*/
 @media (max-width: 771px) {
     .hands {
         display: flex;
@@ -572,5 +541,26 @@ footer {
     .btn_instruction {
         margin-left: 15px;
     }
+}
 
+/*--Media for with-friend page--*/
+
+/* Media for tablets */
+@media (max-width: 771px) {
+    .player img {
+        width: 130px;
+        height: 130px;
+        display: block;
+    }
+}
+
+/*Media for mobile*/
+@media screen and (max-width: 414px) {
+    .hand {
+        margin: 0px
+    }
+
+    main {
+        flex: none;
+    }
 }
