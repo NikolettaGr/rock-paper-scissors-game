@@ -106,3 +106,45 @@ const handlePlayer2Choice = (choiceName) => {
     playAgainButton.style.display = "block"; // Show play again button
     scoreUpdate();
 };
+
+// Update the score
+function scoreUpdate() {
+    if (player1Choice && player2Choice) {
+        if (player1Choice.name === player2Choice.beats) {
+            player2Score++;
+        } else if (player1Choice.beats === player2Choice.name) {
+            userScore++;
+        } else {
+            gameResult = "It's a tie!";
+        }
+
+        scorePlayer1.innerText = userScore;
+        scorePlayer2.innerText = player2Score;
+        refereeText.innerText = gameResult;
+        refereeDiv.style.display = "block";
+    }
+}
+
+// Event listeners for player choices
+player1Buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+        // Remove the "selected" class from all player1Buttons
+        player1Buttons.forEach((btn) => btn.classList.remove("selected"));
+
+        // Add the "selected" class to the clicked button
+        button.classList.add("selected");
+
+        handlePlayer1Choice(button.classList[1]);
+    });
+});
+
+
+
+player2Buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+        handlePlayer2Choice(button.classList[1]);
+
+        contentDiv.style.display = "none";
+        resultsDiv.style.display = "flex";
+    });
+});
