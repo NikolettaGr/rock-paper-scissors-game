@@ -48,6 +48,8 @@ let closeModalRules = function () {
 /**
  * Game Logic
  */
+
+// Get DOM elements and assign them to variables
 const choiceButtons = document.querySelectorAll('.btn-hand');
 const divGame = document.querySelector('.hands');
 const divResults = document.querySelector('.results');
@@ -58,7 +60,6 @@ const userChoiceElement = document.getElementById("user-choice-image");
 const computerChoiceElement = document.getElementById("computer-choice-image");
 const gameResult = document.querySelector('.decision h1');
 const playAgainButton = document.querySelector('.play-again');
-
 const choices = [
     {
         name: "rock",
@@ -80,6 +81,7 @@ const choices = [
 let userScore = 0;
 let AIscore = 0;
 
+// Event listeners for choice buttons
 choiceButtons.forEach(function (button) {
     button.addEventListener('click', function () {
         const nameChoice = button.dataset.choice;
@@ -92,6 +94,8 @@ choiceButtons.forEach(function (button) {
     });
 });
 
+
+// Function to get User's choice and get the result
 function userChoose(choice) {
     console.log(choice);
     console.log('userScore', userScore);
@@ -128,11 +132,13 @@ function userChoose(choice) {
     }
 };
 
+// Function to get AI's choice
 function aiChoose() {
     const random = Math.floor(Math.random() * choices.length);
     return choices[random];
 };
 
+// Event listener for play again button
 playAgainButton.addEventListener('click', function () {
     divGame.style.display = "flex";
     divResults.style.display = "none";
