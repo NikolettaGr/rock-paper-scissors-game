@@ -428,6 +428,11 @@ main {
     height: 300px;
 }
 
+.waiting-text {
+    font-size: 2em;
+    color: #f4c84c;
+}
+
 /*---With Friend Page--*/
 .main_friend {
     display: flex;
