@@ -122,7 +122,8 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30em;
+    max-width: 30rem;
+    min-width: 90%;
     height: 25rem;
     border-radius: 8px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.7);
@@ -262,7 +263,8 @@ main {
 .quit-container h2,
 .answer1 h3,
 .answer2 h3 {
-    color: #fafafa;
+    color: black;
+    font-size: 30px;
 }
 
 /*Styling Main Container*/
@@ -337,10 +339,6 @@ main {
 
 .hand {
     margin-right: 20px;
-}
-
-.hands .hand_img {
-    width: 220px;
 }
 
 .hands .hand {
@@ -428,6 +426,8 @@ main {
 .waiting-text {
     font-size: 2em;
     color: #f4c84c;
+    text-align: center;
+    padding: 20px;
 }
 
 /*----> Styling With-friend Page <----*/
@@ -474,6 +474,11 @@ main {
 .name {
     padding-bottom: 10px;
     padding-top: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
 
 /*----> Footer <----*/
@@ -488,7 +493,7 @@ footer {
 /*--Media for with-computer page--*/
 
 /*Media for tablets*/
-@media (max-width: 771px) {
+@media (max-width: 880px) {
     .hands {
         display: flex;
     }
@@ -505,6 +510,8 @@ footer {
 
     .results {
         width: 450px;
+        display: flex;
+        flex-direction: column;
     }
 
     .results img {
