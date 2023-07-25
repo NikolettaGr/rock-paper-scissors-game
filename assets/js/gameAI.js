@@ -84,6 +84,9 @@ const choices = [
 
 let userScore = 0;
 let AIscore = 0;
+const maxRounds = 5;
+currentRound = 1;
+
 
 // Event listeners for choice buttons
 choiceButtons.forEach(function (button) {
@@ -134,7 +137,27 @@ function userChoose(choice) {
     } else {
         gameResult.innerHTML = "IT'S A TIE! 🤪";
     }
+
+    currentRound++;
+
+    if (currentRound >= maxRounds) {
+        checkWinner();
+    }
 };
+
+// Function to check the winner after 5 rounds
+function checkWinner() {
+    if (userScore > AIscore) {
+        gameResult.innerHTML = "YOU ARE THE WINNER! 🏆";
+    } else if (userScore < AIscore) {
+        gameResult.innerHTML = "COMPUTER WINS!";
+    } else {
+        gameResult.innerHTML = "IT'S A TIE! 🤪";
+    }
+
+    playAgainButton.style.display = "block";
+};
+
 
 // Function to get AI's choice
 function aiChoose() {
@@ -147,7 +170,6 @@ playAgainButton.addEventListener('click', function () {
     divGame.style.display = "flex";
     divResults.style.display = "none";
 });
-
 
 
 
