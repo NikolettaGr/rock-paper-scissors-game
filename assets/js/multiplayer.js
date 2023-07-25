@@ -74,17 +74,17 @@ const player2OriginalContent = document.querySelector(".content");
 const choices = [
     {
         name: "rock",
-        imageSrc: "rock.png",
+        imageSrc: "assets/images/rock.png",
         beats: "scissors"
     },
     {
         name: "paper",
-        imageSrc: "paper.png",
+        imageSrc: "assets/images/paper.png",
         beats: "rock"
     },
     {
         name: "scissors",
-        imageSrc: "scissors.png",
+        imageSrc: "assets/images/scissors.png",
         beats: "paper"
     }
 ];
