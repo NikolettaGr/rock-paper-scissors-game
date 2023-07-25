@@ -67,6 +67,8 @@ const contentDiv = document.querySelector(".content");
 const refereeDiv = document.querySelector(".referee");
 const player0Div = document.querySelector(".player-0");
 const player1Div = document.querySelector(".player-1");
+const showFirstPlayerWaiting = document.querySelector('#player1-hidden');
+const showFirstPlayerInGame = document.querySelector('#player1-displayed');
 const player1OriginalContent = document.querySelector(".content");
 const player2OriginalContent = document.querySelector(".content");
 const choices = [
@@ -100,7 +102,9 @@ const handlePlayer1Choice = (choiceName) => {
     resultsDiv.style.display = "none";
     refereeText.innerText = "Waiting for Player 2...";
     refereeDiv.style.display = "block";
-    player0Div.innerHTML = `<h2 class='name' id='name-0'>Player 1</h2><p class='waiting-text'>Waiting for player 2 to choose...</p>`;
+    // player0Div.innerHTML = ``;
+    showFirstPlayerWaiting.classList.remove('hidden');
+    showFirstPlayerInGame.classList.add('hidden');
 };
 
 
@@ -156,4 +160,7 @@ playAgainButton.addEventListener("click", function () {
     resultsDiv.style.display = "none";
     contentDiv.style.display = "block";
     refereeDiv.style.display = "none";
+    // player0Div.innerHTML = ``;
+    showFirstPlayerWaiting.classList.add('hidden');
+    showFirstPlayerInGame.classList.remove('hidden');
 });
