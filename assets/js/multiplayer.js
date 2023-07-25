@@ -62,7 +62,8 @@ const contentDiv = document.querySelector(".content");
 const refereeDiv = document.querySelector(".referee");
 const player0Div = document.querySelector(".player-0");
 const player1Div = document.querySelector(".player-1");
-
+const player1OriginalContent = document.querySelector(".content");
+const player2OriginalContent = document.querySelector(".content");
 const choices = [
     {
         name: "rock",
@@ -128,12 +129,6 @@ function scoreUpdate() {
 // Event listeners for player choices
 player1Buttons.forEach((button) => {
     button.addEventListener("click", function () {
-        // Remove the "selected" class from all player1Buttons
-        player1Buttons.forEach((btn) => btn.classList.remove("selected"));
-
-        // Add the "selected" class to the clicked button
-        button.classList.add("selected");
-
         handlePlayer1Choice(button.classList[1]);
     });
 });
@@ -154,7 +149,4 @@ playAgainButton.addEventListener("click", function () {
     resultsDiv.style.display = "none";
     contentDiv.style.display = "block";
     refereeDiv.style.display = "none";
-
-    player0Div.innerHTML = player1OriginalContent;
-    player1Div.innerHTML = player2OriginalContent;
 });
