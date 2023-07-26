@@ -53,6 +53,10 @@ main {
     font-size: 4vh;
 }
 
+.info_modal {
+    float: right;
+}
+
 /*Menu Main*/
 .menu_main {
     grid-column: 1/4;
