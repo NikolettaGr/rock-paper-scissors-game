@@ -127,7 +127,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 30rem;
-    min-width: 90%;
+    min-width: 50%;
     height: 25rem;
     border-radius: 8px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.7);
@@ -500,6 +500,15 @@ footer {
 
 /*Media for tablets*/
 @media (max-width: 880px) {
+
+    .quit-container h2 {
+        margin-left: 15px;
+    }
+
+    .contact_title {
+        font-size: 1.5rem;
+    }
+
     .hands {
         display: flex;
     }
@@ -532,6 +541,11 @@ footer {
 
     /*Media for mobile*/
     @media screen and (max-width: 414px) {
+
+        .contact_title {
+            font-size: 1rem;
+        }
+
         .hands {
             display: flex;
             flex-direction: column;
@@ -575,6 +589,11 @@ footer {
 
         main {
             flex: none;
+        }
+
+        .quit-container h2 {
+            font-size: 1.5rem;
+            text-align: center;
         }
     }
 }
