@@ -207,7 +207,6 @@ main {
     background-color: #f4c84c;
     border-radius: 8px;
     border: none;
-    width: 5rem;
     text-align: center;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -522,55 +521,56 @@ footer {
         height: 130px;
     }
 
-    .decision {
-        width: 100px;
-    }
-
     .decision h1 {
         font-size: 30px;
-    }
-}
-
-/*Media for mobile*/
-@media screen and (max-width: 414px) {
-    .hands {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
     }
 
-    .results {
-        width: 400px;
+    /*Media for mobile*/
+    @media screen and (max-width: 414px) {
+        .hands {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .results {
+            width: 400px;
+        }
+
+        #scissors {
+            margin-bottom: 9px;
+        }
+
+        .btn_instruction {
+            margin-left: 15px;
+        }
+
+        .decision h1 {
+            text-align: center;
+        }
     }
 
-    #scissors {
-        margin-bottom: 9px;
+    /*--Media for with-friend page--*/
+
+    /* Media for tablets */
+    @media (max-width: 880px) {
+        .player img {
+            width: 130px;
+            height: 130px;
+            display: block;
+        }
     }
 
-    .btn_instruction {
-        margin-left: 15px;
-    }
-}
+    /*Media for mobile*/
+    @media screen and (max-width: 414px) {
+        .hand {
+            margin: 0px
+        }
 
-/*--Media for with-friend page--*/
-
-/* Media for tablets */
-@media (max-width: 771px) {
-    .player img {
-        width: 130px;
-        height: 130px;
-        display: block;
-    }
-}
-
-/*Media for mobile*/
-@media screen and (max-width: 414px) {
-    .hand {
-        margin: 0px
-    }
-
-    main {
-        flex: none;
+        main {
+            flex: none;
+        }
     }
 }
