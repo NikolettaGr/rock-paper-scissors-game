@@ -208,7 +208,7 @@ main {
     align-content: center;
     align-items: center;
     font-size: 3vh;
-    background-color: #f4c84c;
+    background-color: #fad02c;
     border-radius: 8px;
     border: none;
     text-align: center;
@@ -222,7 +222,7 @@ main {
     align-content: center;
     align-items: center;
     font-size: 3vh;
-    background-color: #f4c84c;
+    background-color: #fad02c;
     border-radius: 8px;
     border: none;
     text-align: center;
@@ -260,7 +260,7 @@ main {
 }
 
 .quit-question h3:hover {
-    color: #f4c84c;
+    color: #fad02c;
 }
 
 .quit-container h2,
