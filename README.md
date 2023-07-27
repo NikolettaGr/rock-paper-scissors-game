@@ -178,9 +178,9 @@ The site can be accessed by this [link](https://nikolettagr.github.io/rock-paper
   - Menu Page:
           ![Menu Page HTML Validator](assets/documentation/html-validator-main.png)
   - AI Page:
-          ![AI Page HTML Validator]()
+          ![AI Page HTML Validator](assets/documentation/html-validator-computer.png)
   - Friend Page:
-          ![Friend Page HTML Validator]()
+          ![Friend Page HTML Validator](assets/documentation/html-validator-friend.png)
 
 + ##### CSS
   - No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri). I input direct my scc code.
@@ -194,12 +194,12 @@ The site can be accessed by this [link](https://nikolettagr.github.io/rock-paper
   
   - AI Page:
 
-    ![AI JS](documentation/validators_testing/jshint_grammar_quiz_js.png)
+    ![AI JS]()
 
 
   - Friend Page:
     
-    ![Friend JS](documentation/validators_testing/jshint_grammar_quiz_js.png)
+    ![Friend JS]()
 
 
 + ##### Accessibility and performance 
