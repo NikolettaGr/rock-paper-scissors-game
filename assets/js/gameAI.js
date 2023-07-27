@@ -139,7 +139,7 @@ function userChoose(choice) {
     }
     currentRound++;
 
-    if (currentRound === maxRounds) {
+    if (currentRound > maxRounds) {
         checkWinner();
     }
 };
@@ -147,21 +147,25 @@ function userChoose(choice) {
 
 // Function to check the winner after 5 rounds
 function checkWinner() {
-    if (userScore > AIscore) {
-        gameResult.innerHTML = "YOU ARE THE WINNER! 🏆";
-        console.log('userScore', userScore);
-        console.log('AIscore', AIscore);
-    } else if (userScore < AIscore) {
-        gameResult.innerHTML = "COMPUTER WINS!";
-        console.log('userScore', userScore);
-        console.log('AIscore', AIscore)
-    } else {
-        gameResult.innerHTML = "IT'S A TIE! 🤪";
-        console.log('userScore', userScore);
-        console.log('AIscore', AIscore)
-    }
+    if (currentRound > maxRounds) {
+        if (userScore > AIscore) {
+            gameResult.innerHTML = "YOU ARE THE WINNER! 🏆";
+            console.log('Final Winner: YOU');
+        } else if (userScore < AIscore) {
+            gameResult.innerHTML = "COMPUTER WINS!";
+            console.log('Final Winner: COMPUTER');
+        } else {
+            gameResult.innerHTML = "IT'S A TIE! 🤪";
+            console.log('Final Winner: TIE');
+        }
 
-    playAgainButton.style.display = "block";
+        playAgainButton.style.display = "block";
+    }
+    userScore = 0;
+    AIscore = 0;
+    currentRound = 1;
+    scoreUserContainer.innerHTML = userScore;
+    scoreAIContainer.innerHTML = AIscore;
 };
 
 
@@ -170,6 +174,8 @@ function aiChoose() {
     const random = Math.floor(Math.random() * choices.length);
     return choices[random];
 };
+
+
 
 // Event listener for play again button
 playAgainButton.addEventListener('click', function () {
