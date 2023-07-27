@@ -1,7 +1,7 @@
 /* jshint esversion:8 */
 
 let btnQuitOpen = document.querySelector('#quit-button');
-let btnRulesOpen = document.querySelector('#button_instruction')
+let btnRulesOpen = document.querySelector('#button_instruction');
 let btnQuitClose = document.querySelector('#close-modal');
 let btnRulesClose = document.querySelector('#close-modal-rules');
 let modalQuit = document.querySelector('#modal-quit');
@@ -11,7 +11,7 @@ let overlay = document.querySelector('#cover');
 document.addEventListener('DOMContentLoaded', function () {
     // Open modal windows
     btnQuitOpen.addEventListener('click', openModalQuit);
-    btnRulesOpen.addEventListener('click', openModalRules)
+    btnRulesOpen.addEventListener('click', openModalRules);
 
     // Close modal windows
     btnQuitClose.addEventListener('click', closeModalQuit);
@@ -57,7 +57,6 @@ let closeModalRules = function () {
 const choiceButtons = document.querySelectorAll('.btn-hand');
 const divGame = document.querySelector('.hands');
 const divResults = document.querySelector('.results');
-const resultDiv = document.querySelector('.choice-hand');
 const scoreUserContainer = document.getElementById("score-user");
 const scoreAIContainer = document.getElementById("score-computer");
 const userChoiceElement = document.getElementById("user-choice-image");
@@ -85,7 +84,7 @@ const choices = [
 let userScore = 0;
 let AIscore = 0;
 const maxRounds = 5;
-currentRound = 1;
+let currentRound = 1;
 
 
 // Event listeners for choice buttons
@@ -106,7 +105,7 @@ choiceButtons.forEach(function (button) {
 function userChoose(choice) {
     console.log(choice);
     console.log('userScore', userScore);
-    console.log('AIscore', AIscore)
+    console.log('AIscore', AIscore);
     console.log('scoreAIContainer', scoreAIContainer);
     console.log('scoreUserContainer', scoreUserContainer);
     const computerChoice = aiChoose();
@@ -119,20 +118,20 @@ function userChoose(choice) {
 
     if (choice.name === computerChoice.beats) {
         console.log('userScore', userScore);
-        console.log('AIscore', AIscore)
+        console.log('AIscore', AIscore);
         gameResult.innerHTML = "YOU LOSE! 😔";
         AIscore++;
         console.log('userScore', userScore);
-        console.log('AIscore', AIscore)
+        console.log('AIscore', AIscore);
         scoreAIContainer.innerHTML = AIscore;
 
     } else if (choice.beats === computerChoice.name) {
         gameResult.innerHTML = "YOU WIN! 🎉";
         console.log('userScore', userScore);
-        console.log('AIscore', AIscore)
+        console.log('AIscore', AIscore);
         userScore++;
         console.log('userScore', userScore);
-        console.log('AIscore', AIscore)
+        console.log('AIscore', AIscore);
         scoreUserContainer.innerHTML = userScore;
     } else {
         gameResult.innerHTML = "IT'S A TIE! 🤪";
@@ -142,7 +141,7 @@ function userChoose(choice) {
     if (currentRound > maxRounds) {
         checkWinner();
     }
-};
+}
 
 
 // Function to check the winner after 5 rounds
@@ -166,14 +165,14 @@ function checkWinner() {
     currentRound = 1;
     scoreUserContainer.innerHTML = userScore;
     scoreAIContainer.innerHTML = AIscore;
-};
+}
 
 
 // Function to get AI's choice
 function aiChoose() {
     const random = Math.floor(Math.random() * choices.length);
     return choices[random];
-};
+}
 
 
 
@@ -182,13 +181,3 @@ playAgainButton.addEventListener('click', function () {
     divGame.style.display = "flex";
     divResults.style.display = "none";
 });
-
-
-
-
-
-
-
-
-
-
