@@ -138,6 +138,11 @@ The site can be accessed by this [link](https://nikolettagr.github.io/rock-paper
 
  - Moving forward, I have taken these mistakes as valuable learning experiences, and I am committed to improving my version control practices during future commits. I will be more diligent in reviewing changes, writing clear and descriptive commit messages, and double-checking the files I include in each commit to ensure a smoother and more organized development process.
 
+ +**Improve the game**
+
+  - Since I didn't have time to make function the 5 rounds game to Multiplayer JS file ,I will fix the game in the future to make the game completely complete.
+  And I apologize for that!
+
 
 ## Testing
 
