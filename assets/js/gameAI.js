@@ -137,22 +137,28 @@ function userChoose(choice) {
     } else {
         gameResult.innerHTML = "IT'S A TIE! 🤪";
     }
-
     currentRound++;
 
-    if (currentRound >= maxRounds) {
+    if (currentRound === maxRounds) {
         checkWinner();
     }
 };
+
 
 // Function to check the winner after 5 rounds
 function checkWinner() {
     if (userScore > AIscore) {
         gameResult.innerHTML = "YOU ARE THE WINNER! 🏆";
+        console.log('userScore', userScore);
+        console.log('AIscore', AIscore);
     } else if (userScore < AIscore) {
         gameResult.innerHTML = "COMPUTER WINS!";
+        console.log('userScore', userScore);
+        console.log('AIscore', AIscore)
     } else {
         gameResult.innerHTML = "IT'S A TIE! 🤪";
+        console.log('userScore', userScore);
+        console.log('AIscore', AIscore)
     }
 
     playAgainButton.style.display = "block";
