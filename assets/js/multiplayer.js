@@ -2,7 +2,7 @@
 
 // Get DOM elements and assign them to variables
 let btnQuitOpen = document.querySelector('#quit-button');
-let btnRulesOpen = document.querySelector('#button_instruction')
+let btnRulesOpen = document.querySelector('#button_instruction');
 let btnQuitClose = document.querySelector('#close-modal');
 let btnRulesClose = document.querySelector('#close-modal-rules');
 let modalQuit = document.querySelector('#modal-quit');
@@ -12,7 +12,7 @@ let overlay = document.querySelector('#cover');
 document.addEventListener('DOMContentLoaded', function () {
     // Open modal windows
     btnQuitOpen.addEventListener('click', openModalQuit);
-    btnRulesOpen.addEventListener('click', openModalRules)
+    btnRulesOpen.addEventListener('click', openModalRules);
 
     // Close modal windows
     btnQuitClose.addEventListener('click', closeModalQuit);
@@ -65,12 +65,8 @@ const scorePlayer2 = document.getElementById("score-player2");
 const resultsDiv = document.querySelector(".results");
 const contentDiv = document.querySelector(".content");
 const refereeDiv = document.querySelector(".referee");
-const player0Div = document.querySelector(".player-0");
-const player1Div = document.querySelector(".player-1");
 const showFirstPlayerWaiting = document.querySelector('#player1-hidden');
 const showFirstPlayerInGame = document.querySelector('#player1-displayed');
-const player1OriginalContent = document.querySelector(".content");
-const player2OriginalContent = document.querySelector(".content");
 const choices = [
     {
         name: "rock",
@@ -133,7 +129,7 @@ function scoreUpdate() {
         refereeText.innerText = gameResult;
         refereeDiv.style.display = "block";
     }
-};
+}
 
 
 /// Event listeners for player choices
