@@ -194,12 +194,12 @@ The site can be accessed by this [link](https://nikolettagr.github.io/rock-paper
   
   - AI Page:
 
-    ![AI JS]()
+    ![AI JS](assets/documentation/JS-hint-AI.png)
 
 
   - Friend Page:
     
-    ![Friend JS]()
+    ![Friend JS](assets/documentation/js-hint-friend.png)
 
 
 + ##### Accessibility and performance 
