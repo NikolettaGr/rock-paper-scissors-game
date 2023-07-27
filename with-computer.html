@@ -17,12 +17,12 @@
 <body>
     <!--Header of the Menu-->
     <header class="header">
-        <div class="quit_button" id="quit-button">
+        <span class="quit_button" id="quit-button">
             <button class="btn_instruction">Quit</button>
-        </div>
-        <div class="button_instruction" id="button_instruction">
+        </span>
+        <span class="button_instruction" id="button_instruction">
             <button class="btn_instruction">Rules</button>
-        </div>
+        </span>
     </header>
     <!--Main Game-->
     <main class="main_container">
@@ -37,21 +37,21 @@
             </div>
         </div>
         <div class="hands">
-            <button class="btn-hand" data-choice="paper">
+            <div class="btn-hand" data-choice="paper">
                 <div class="hand" id="paper">
                     <img class="img" src="assets/images/paper.png" alt="hand paper">
                 </div>
-            </button>
-            <button class="btn-hand" data-choice="scissors">
+            </div>
+            <div class="btn-hand" data-choice="scissors">
                 <div class="hand" id="scissors">
                     <img class="img" src="assets/images/scissors.png" alt="hand scissors">
                 </div>
-            </button>
-            <button class="btn-hand" data-choice="rock">
+            </div>
+            <div class="btn-hand" data-choice="rock">
                 <div class="hand" id="rock">
                     <img class="img" src="assets/images/rock.png" alt="hand rock">
                 </div>
-            </button>
+            </div>
         </div>
     </main>
     <!--Hidden results-->
@@ -59,7 +59,8 @@
         <div class="user-choice">
             <h1>YOU</h1>
             <div class="choice-hand">
-                <img id="user-choice-image" src="" alt="user need to choose from rock,paper,scissors">
+                <img id="user-choice-image" src="assets/images/paper.png"
+                    alt="user need to choose from rock,paper,scissors">
             </div>
         </div>
         <div class="referee">
@@ -71,7 +72,8 @@
         <div class="computer-choice">
             <h1>COMPUTER</h1>
             <div class="choice-hand">
-                <img id="computer-choice-image" src="" alt="user need to choose from rock,paper,scissors">
+                <img id="computer-choice-image" src="assets/images/paper.png"
+                    alt="user need to choose from rock,paper,scissors">
             </div>
         </div>
     </div>
@@ -94,14 +96,14 @@
             </div>
         </div>
     </aside>
-    <div class="overlay overlay--hidden" id="overlay"></div>
+    <div class="overlay overlay--hidden" id="cover"></div>
     <aside class="modal modal-hidden" id="modal-rules">
         <button class="close-modal" id="close-modal-rules">&times;</button>
         <div class="rule-image">
             <img src="assets/images/rules-image.png" alt="Rock,paper,scissors rules image">
         </div>
     </aside>
-    <div class="overlay overlay--hidden" id="overlay"></div>
+    <div class="overlay overlay--hidden" id="cover"></div>
     <footer>
         Coded by Nikoletta Grishaber
     </footer>
