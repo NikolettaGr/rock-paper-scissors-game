@@ -6,7 +6,7 @@ let btnQuitClose = document.querySelector('#close-modal');
 let btnRulesClose = document.querySelector('#close-modal-rules');
 let modalQuit = document.querySelector('#modal-quit');
 let modalRules = document.querySelector('#modal-rules');
-let overlay = document.querySelector('#overlay');
+let overlay = document.querySelector('#cover');
 
 document.addEventListener('DOMContentLoaded', function () {
     // Open modal windows
