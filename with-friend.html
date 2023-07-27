@@ -17,12 +17,12 @@
 <body class="body_friend">
     <!--Header of the Menu-->
     <header class="header">
-        <div class="quit_button" id="quit-button">
+        <span class="quit_button" id="quit-button">
             <button class="btn_instruction">Quit</button>
-        </div>
-        <div class="button_instruction" id="button_instruction">
+        </span>
+        <span class="button_instruction" id="button_instruction">
             <button class="btn_instruction">Rules</button>
-        </div>
+        </span>
     </header>
     <!--Main Game-->
     <main class="main_container">
@@ -38,7 +38,7 @@
         </div>
         <div class="content">
             <div class="player player-0" id="player1-displayed">
-                <h2 class="name" id="name-0">Player 1</h2>
+                <h2 class="user" id="name-0">Player 1</h2>
                 <div class="hands_friend">
                     <div class="hand paper">
                         <img src="assets/images/paper.png" alt="hand paper">
@@ -52,12 +52,12 @@
                 </div>
             </div>
             <div class="hidden" id="player1-hidden">
-                <h2 class='name' id='name-0'>Player 1</h2>
+                <h2 class='user' id='name-0'>Player 1</h2>
                 <p class='waiting-text'>Waiting for player 2 to choose...</p>
             </div>
             <hr>
             <div class="player player-1">
-                <h2 class="name" id="name-1">Player 2</h2>
+                <h2 class="user" id="name-1">Player 2</h2>
                 <div class="hands_friend">
                     <div class="hand paper">
                         <img src="assets/images/paper.png" alt="paper">
@@ -77,7 +77,8 @@
         <div class="user-choice">
             <h1>PLAYER 1 PICKED</h1>
             <div class="choice-hand">
-                <img id="player1-choice-image" src="" alt="player1 need to choose from rock,paper,scissors">
+                <img id="player1-choice-image" src="assets/images/paper.png"
+                    alt="player1 need to choose from rock,paper,scissors">
             </div>
         </div>
         <div class="referee">
@@ -89,7 +90,8 @@
         <div class="computer-choice">
             <h1>PLAYER 2 PICKED</h1>
             <div class="choice-hand">
-                <img id="player2-choice-image" src="" alt="player2 need to choose from rock,paper,scissors">
+                <img id="player2-choice-image" src="assets/images/paper.png"
+                    alt="player2 need to choose from rock,paper,scissors">
             </div>
         </div>
     </div>
@@ -112,14 +114,14 @@
             </div>
         </div>
     </aside>
-    <div class="overlay overlay--hidden" id="overlay"></div>
+    <div class="overlay overlay--hidden" id="cover"></div>
     <aside class="modal modal-hidden" id="modal-rules">
         <button class="close-modal" id="close-modal-rules">&times;</button>
         <div class="rule-image">
             <img src="assets/images/rules-image.png" alt="Rock,paper,scissors rules image">
         </div>
     </aside>
-    <div class="overlay overlay--hidden" id="overlay"></div>
+    <div class="overlay overlay--hidden" id="cover"></div>
     <footer>
         Coded by Nikoletta Grishaber
     </footer>
